@@ -15,6 +15,7 @@ Run the presentation
 Resources
 ---------
 
+- [Golang Home](https://golang.org)
 - [A Tour of Go](https://tour.golang.org)
 - [Awesome Go](https://github.com/avelino/awesome-go)
 - [talks.golang.org](https://talks.golang.org)

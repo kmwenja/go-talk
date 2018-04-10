@@ -1,0 +1,152 @@
+Why you should Go
+16:00 07 Apr 2018
+
+Kennedy Mwenja
+Software Engineer, Savannah Informatics Ltd.
+mwenja07@gmail.com
+@caninemwenja
+
+* Intro
+
+Conceived in 2007 to solve Google's software eng needs:
+
+- uncontrolled dependencies
+- long build times
+- languages are large enough that programmers use subsets
+- hard to understand code and thus maintain it
+
+Requirements:
+
+- work at scale: large programs, large teams, large no of dependencies
+- familiar i.e. C-like
+- modern: multi-core, networking, web app dev
+
+* Go
+
+- First release 2009, 1.0 in 2012
+- Simple, ~25 Keywords
+- C Syntax, Statically Typed, Compiled
+- Garbage Collected
+- Interfaces
+- Concurrent
+
+* Example
+
+.play simple.go
+
+* Example Web Server
+
+.play web.go
+
+* Concurrency
+
+- M:N scheduling
+- Goroutines
+- Channels
+
+* Simple Concurrency
+
+.play concurrent.go /^func say/,$
+
+* Realistic Concurrency
+
+.play realistic.go /^func scheduler/,$
+
+* Things to Note
+
+- multiple return values
+- package visibility
+- errors vs panics
+- structs are not classes
+- interfaces
+- gofmt styleguide
+- godoc
+- go runtime
+
+* Benefits
+
+- single static binary
+- multi-core by default
+- efficient
+- portable
+- easy maintenance
+- stable
+- very fast compilation
+
+* Notable Go Applications
+
+- Containers: Docker, Kubernetes
+- Configuration: Etcd, Consul
+- Orchestartion: Nomad, Terraform
+- Observability: Grafana, TICK
+- Static Sites: Hugo
+- DBS: CockroachDB, InfluxDB
+- Webservers: Caddy
+- CI/CD: Drone
+- Mattermost
+
+* Notable Go Users
+
+- Google
+- Dropbox
+- Hashicorp
+- Heroku
+- Soundcloud
+- Twitch
+- Microsoft
+- Canonical
+- Digital Ocean
+- Fastly
+- CloudFlare
+
+* How We Used It
+
+- Messaging system
+- Distributed, Decentralized
+- Behind Firewalls, Varied resources, Varied Connectivity
+- Initially in python: raw sockets/zeromq/websockets on twisted/multiprocessing
+- Problems: slow, difficult to understand, too much magic, debugging was hell, efficiency issues
+- Rebuilt in Go
+- 2 servers and multiple WS connections on top of 1 store
+- Prod ready: TLS, Observability, Error reporting
+- 100k to 1 million messages an hour
+
+* Outstanding Issues
+
+- Single workspace
+- Dependency management
+- Lib support: GUI, Audio
+- Generics?
+- No big bang frameworks
+- Deadlock detection
+- Favors monorepos
+
+* Good For
+
+- web development
+- microservices
+- cli apps
+- infrastructure pieces
+- ops tooling
+- systems with heavy networking
+- task queues
+
+* Interesting new areas
+
+- Compile to JS/WASM
+- Embedded
+- Data/ML
+- Ring-0 binaries aka a bootable kernel in Go
+- Game Engines
+
+* Tips for beginners
+
+- explore extensive go tutorials esp Go Tour
+- use a single workspace
+- learn about idiomatic go
+- write toy programs with concurrency
+- start small, scratch an itch
+- Try Vim
+- Answers: Stack Overflow, Godoc, Gowiki, GoBlog, Reading Source
+- Learn: Youtube (Just for Func), Reddit, Twitter, HackerNews, Mailing List, IRC
+- Reach out to the rich community
